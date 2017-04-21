@@ -39,19 +39,21 @@ rm -rf %{buildroot}
 %files
 %dir /usr/share/bgconf
 %dir /usr/share/bgconf/docs
+%dir /usr/share/bgconf/confs-example
 %dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/inc
-/usr/share/bgconf/bgconf.py
-/usr/share/bgconf/bgconf.pyc
-/usr/share/bgconf/bgconf.pyo
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
 /usr/share/bgconf/localapp.py
 /usr/share/bgconf/localapp.pyc
 /usr/share/bgconf/localapp.pyo
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
 %doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
+/usr/share/bgconf/docs/bgconf.spec
 %doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
 %doc %attr(444, -, -) /usr/share/bgconf/docs/README.txt
-/usr/share/bgconf/docs/bgconf.spec
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
+/usr/share/bgconf/bgconf.py
+/usr/share/bgconf/bgconf.pyc
+/usr/share/bgconf/bgconf.pyo
 /usr/share/bgconf/inc/get-files
 /usr/share/bgconf/inc/pack
 %doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
@@ -60,6 +62,9 @@ rm -rf %{buildroot}
 /usr/share/bgconf/confs/firefox/*
 %dir /usr/share/bgconf/confs/scite
 %attr(666, -, -) /usr/share/bgconf/confs/scite/SciTEGlobal.properties
+%dir /usr/share/bgconf/confs/fstab
+/usr/share/bgconf/confs/fstab/*
+%attr(600, root, root) /usr/share/bgconf/confs/fstab/.bgirton.smith122.com
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1

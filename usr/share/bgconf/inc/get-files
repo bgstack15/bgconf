@@ -10,7 +10,7 @@ find * -type d -regextype grep \
    ! -regex '.*\/confs\/.*' \
    | sed -e 's/^/%dir \//;'
 {
-   find * -mindepth 1 ! -name "${package}.spec.$$.swp" \
+   find * -mindepth 1 ! -name "${package}.spec.$$.swp" ! -regex ".*\.gitignore" \
    ! -type d -regextype grep \
    ! -regex '.*.swp' \
    ! -regex '.*?DEBIAN.*?' \

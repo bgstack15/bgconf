@@ -5,3 +5,6 @@
 /usr/share/bgconf/confs/firefox/*
 %dir /usr/share/bgconf/confs/scite
 %attr(666, -, -) /usr/share/bgconf/confs/scite/SciTEGlobal.properties
+%dir /usr/share/bgconf/confs/fstab
+/usr/share/bgconf/confs/fstab/*
+%attr(600, root, root) /usr/share/bgconf/confs/fstab/.bgirton.smith122.com
