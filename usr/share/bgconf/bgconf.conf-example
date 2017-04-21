@@ -1,0 +1,42 @@
+[bgconf]
+minversion      2017-04-09a
+source		/usr/share/bgconf/confs/
+forceall        0       # place confs even if the app does not exist here
+overwriteall	0	# overwrite existing confs
+
+[bgconf:firefox]    # FOO
+check		/usr/bin/firefox
+source          ${defaultsource}/${app} #ALSO FOO
+directory       "${source}/l66fxtn7.default" "${HOME}/.mozilla/firefox/l66fxtn7.default"
+file            "${source}/profiles.ini" "${HOME}/.mozilla/firefox/profiles.ini"
+file		"${source}/extensions/down-them-all.xpi" /usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/{1dbc4a33-ea62-4330-966c-7bdad3455322}.xpi
+file		"${source}/extensions/arc-theme.xpi" /usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/{52c2877e-44e1-11e5-8874-a62d1d5d46B0}.xpi
+file		"${source}/extensions/youtube-audio-and-video-downloader.xpi" /usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/feca4b87-3be4-43da-a1b1-137c24220968@jetpack.xpi
+file		"${source}/extensions/uBlock0@raymondhill.net.xpi" /usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/uBlock0@raymondhill.net.xpi
+file		"${source}/extensions/xclear@as-computer.de.xpi" /usr/share/mozilla/extensions/{ec8030f7-c20a-464f-9b0e-13a3a9e97384}/xclear@as-computer.de.xpi
+overwrite	1
+force           0
+#action          "systemctl restart daemon-example.service > /dev/null"
+
+[bgconf:irfan]
+check	/usr/share/irfan/irfan.sh
+source	${defaultsource}/${app}
+file	"${source}/i_view32.ini" "/usr/share/irfan/irfanview/i_view32.ini"
+overwrite	1
+force		0
+
+[bgconf:scite]
+check	/usr/bin/scite
+source	${defaultsource}/${app}
+file	"${source}/SciTEGlobal.properties" "/usr/share/scite/SciTEGlobal.properties"
+overwrite	1
+force		0
+
+[bgconf:fstab]
+check	/etc/fstab
+source	${defaultsource}/${app}
+file	"${source}/fstab.bgconf" "/etc/fstab.bgconf"
+file	"${source}/.username.example.com" "/etc/mnt/.username.example.com"
+overwrite	1
+force		0
+action		"/usr/share/bgscripts/confs/fstab/fstab-bgconf.sh"

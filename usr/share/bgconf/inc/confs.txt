@@ -1,0 +1,7 @@
+# The %files for the confs directory. Probably will have to write this by hand.
+# This is appended to the %files in the spec.
+%attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
+%dir /usr/share/bgconf/confs/firefox
+/usr/share/bgconf/confs/firefox/*
+%dir /usr/share/bgconf/confs/scite
+%attr(666, -, -) /usr/share/bgconf/confs/scite/SciTEGlobal.properties

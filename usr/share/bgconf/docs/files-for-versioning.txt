@@ -1,0 +1,3 @@
+docs/bgconf-version.txt
+docs/bgconf.spec
+docs/debian-bgconf/control

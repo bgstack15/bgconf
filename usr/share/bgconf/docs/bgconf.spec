@@ -1,0 +1,66 @@
+Summary:	set of confs for standard deployments
+Name:		bgconf
+Version:	0.1
+Release:	1
+License:	CC BY-SA 4.0
+Group:		Applications/System
+Source:		bgconf.tgz
+URL:		https://bgstack15.wordpress.com/
+#Distribution:
+#Vendor:
+Packager:	B Stack <bgstack15@gmail.com>
+Buildarch:	noarch
+Requires(pre):	/usr/bin/python3
+
+%global _python_bytecompile_errors_terminate_build 0
+
+%description
+Bgconf includes configs for standard applications in my PC deployments.
+A special python script deploys the confs based on its own config file and the presence of the specified applications. See file /usr/share/bgconf/bgconf.conf.
+
+%prep
+%setup
+
+%build
+
+%install
+rm -rf %{buildroot}
+rsync -a . %{buildroot}/ --exclude='**/.*.swp' --exclude='**/.git' --exclude='**/__pycache__'
+
+%clean
+rm -rf %{buildroot}
+
+%post
+
+%preun
+
+%postun
+
+%files
+%dir /usr/share/bgconf
+%dir /usr/share/bgconf/docs
+%dir /usr/share/bgconf/confs
+%dir /usr/share/bgconf/inc
+/usr/share/bgconf/bgconf.py
+/usr/share/bgconf/bgconf.pyc
+/usr/share/bgconf/bgconf.pyo
+/usr/share/bgconf/localapp.py
+/usr/share/bgconf/localapp.pyc
+/usr/share/bgconf/localapp.pyo
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
+%doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
+%doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
+%doc %attr(444, -, -) /usr/share/bgconf/docs/README.txt
+/usr/share/bgconf/docs/bgconf.spec
+/usr/share/bgconf/inc/get-files
+/usr/share/bgconf/inc/pack
+%doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
+%attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
+%dir /usr/share/bgconf/confs/firefox
+/usr/share/bgconf/confs/firefox/*
+%dir /usr/share/bgconf/confs/scite
+%attr(666, -, -) /usr/share/bgconf/confs/scite/SciTEGlobal.properties
+
+%changelog
+* Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
+- Initial rpm build
