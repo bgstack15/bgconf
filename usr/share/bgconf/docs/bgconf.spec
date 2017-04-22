@@ -57,10 +57,6 @@ rm -rf %{buildroot}
 /usr/share/bgconf/inc/get-files
 /usr/share/bgconf/inc/pack
 %doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
-/usr/share/bgconf/foo.py
-/usr/share/bgconf/foo.pyc
-/usr/share/bgconf/foo.pyo
-%dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox

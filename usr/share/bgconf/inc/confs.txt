@@ -1,6 +1,5 @@
-# The %files for the confs directory. Probably will have to write this by hand.
+# The %files for the contents of confs/. Probably will have to write this by hand.
 # This is appended to the %files in the spec.
-%dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox
