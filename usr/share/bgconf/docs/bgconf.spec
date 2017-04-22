@@ -68,6 +68,8 @@ rm -rf %{buildroot}
 %attr(600, root, root) /usr/share/bgconf/confs/fstab/.bgirton.smith122.com
 %ghost /usr/share/bgconf/__pycache__
 %ghost /usr/share/bgconf/__pycache__/localapp.cpython-35.pyc
+%dir /usr/share/bgconf/confs/vlc
+/usr/share/bgconf/confs/vlc/*
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
