@@ -49,17 +49,18 @@ def copyifactive(_filetype, _source, _dest, _thisapp):
    _source = standard_replacements(_source, _thisapp)
    _dest = standard_replacements(_dest, _thisapp)
    if os.path.isfile(_dest) and ( _thisapp.overwrite or overwriteall ) or not os.path.isfile(_dest): _doit = True
+   newDirs = []
    if _doit:
-      try:
-         os.path.isdir(os.path.dirname(_dest))
-      except:
+      if not os.path.isdir(os.path.dirname(_dest)):
+         # handle directories that do not exist yet
+         newDirs = getAbsentParents(_dest)
          os.makedirs(os.path.dirname(_dest))
       if debuglev(1) and dryrun: ferror("Please copy " + _source + " to " + _dest)
       if _filetype == "file":
          if not dryrun:
             shutil.copy2(_source,_dest)
             if debuglev(1): ferror("Copied " + _source + " to " + _dest)
-            _needaction=True
+            _thisapp.needaction=True
       else:
          # assume directory
          try:
@@ -68,7 +69,7 @@ def copyifactive(_filetype, _source, _dest, _thisapp):
             pass
          if not dryrun:
             shutil.copytree(_source,_dest)
-            _needaction=True
+            _thisapp.needaction=True
             if debuglev(1): ferror("Copied " + _source + " to " + _dest)
       # Bonus: set permissions for files in a home directory
       if re.compile('^(\/home\/).*').match(_dest):
@@ -77,22 +78,22 @@ def copyifactive(_filetype, _source, _dest, _thisapp):
          _homedir = os.stat(_homedirstr)
          _owner = _homedir.st_uid
          _group = _homedir.st_gid
-         #try:
+         os.chown(_dest, _owner, _group)
          for _rootdir, _dirs, _files in os.walk(_dest):
             os.chown(_rootdir, _owner, _group)
             for _object in _dirs:
                os.chown(os.path.join(_rootdir, _object), _owner, _group)
             for _object in _files:
                os.chown(os.path.join(_rootdir, _object), _owner, _group)
-         #except:
-         #   pass
+         for thisdir in newDirs:
+            os.chown(thisdir, _owner, _group)
 
 def act(_act, _thisapp):
-   if istruthy(_needaction):
+   if istruthy(_thisapp.needaction):
       if debuglev(1): ferror("Execute " + _act)
       subprocess.call(_act.split())
    else:
-      if debuglev(1): ferror("Skipping action " + _act)
+      if debuglev(1): ferror("Action not needed: " + _act)
 
 def standard_replacements(_string, _thisapp):
    try:
@@ -125,6 +126,18 @@ def standard_replacements(_string, _thisapp):
    for _name, _item in substitutions.items():
       _string = _string.replace(_name, _item)
    return os.path.normpath(_string)
+
+def getAbsentParents(inpath):
+   curpath = inpath
+   result = False
+   output = []
+   while not result:
+      curpath = os.path.dirname(curpath)
+      if not os.path.isdir(curpath):
+         output.append(curpath)
+      else:
+         result = True
+   return sorted(output)
 
 # DEFINE DEFAULT VARIABLES
 conffile = "/usr/share/bgconf/bgconf.conf"
@@ -246,7 +259,6 @@ if debuglev(DEBUG_OPTIONS):
 
 # PERFORM DEPLOYMENTS
 # 2. Execute regular applications
-_needaction=False
 for thisname, thisapp in zones.items():
    if not thisname == "default":
       # check for existence of application

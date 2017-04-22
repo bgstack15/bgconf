@@ -23,3 +23,4 @@ class bgapp:
       self.overwriteall = ""
       self.forceall = ""
       self.check = ""
+      self.needaction = False

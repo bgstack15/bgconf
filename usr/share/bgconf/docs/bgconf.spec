@@ -57,6 +57,8 @@ rm -rf %{buildroot}
 /usr/share/bgconf/inc/get-files
 /usr/share/bgconf/inc/pack
 %doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
+%dir /usr/share/bgconf/confs
+%dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox
 /usr/share/bgconf/confs/firefox/*
@@ -65,6 +67,8 @@ rm -rf %{buildroot}
 %dir /usr/share/bgconf/confs/fstab
 /usr/share/bgconf/confs/fstab/*
 %attr(600, root, root) /usr/share/bgconf/confs/fstab/.bgirton.smith122.com
+%ghost /usr/share/bgconf/__pycache__
+%ghost /usr/share/bgconf/__pycache__/localapp.cpython-35.pyc
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
