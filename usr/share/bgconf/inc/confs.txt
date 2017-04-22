@@ -11,3 +11,5 @@
 %attr(600, root, root) /usr/share/bgconf/confs/fstab/.bgirton.smith122.com
 %ghost /usr/share/bgconf/__pycache__
 %ghost /usr/share/bgconf/__pycache__/localapp.cpython-35.pyc
+%dir /usr/share/bgconf/confs/vlc
+/usr/share/bgconf/confs/vlc/*

@@ -1,7 +1,7 @@
 Summary:	set of confs for standard deployments
 Name:		bgconf
 Version:	0.1
-Release:	1
+Release:	2
 License:	CC BY-SA 4.0
 Group:		Applications/System
 Source:		bgconf.tgz
