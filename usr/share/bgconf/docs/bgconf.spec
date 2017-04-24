@@ -1,7 +1,7 @@
 Summary:	set of confs for standard deployments
 Name:		bgconf
 Version:	0.1
-Release:	2
+Release:	3
 License:	CC BY-SA 4.0
 Group:		Applications/System
 Source:		bgconf.tgz
@@ -70,6 +70,13 @@ rm -rf %{buildroot}
 %ghost /usr/share/bgconf/__pycache__/localapp.cpython-35.pyc
 %dir /usr/share/bgconf/confs/vlc
 /usr/share/bgconf/confs/vlc/*
+%dir /usr/share/bgconf/confs/plank
+/usr/share/bgconf/confs/plank/*
+%dir /usr/share/bgconf/confs/puddletag
+/usr/share/bgconf/confs/puddletag/*
+%dir /usr/share/bgconf/confs/xscreensaver
+/usr/share/bgconf/confs/xscreensaver/.xscreensaver
+/usr/share/bgconf/confs/bgstack15-red-k25
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1

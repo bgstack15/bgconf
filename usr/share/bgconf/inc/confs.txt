@@ -13,3 +13,10 @@
 %ghost /usr/share/bgconf/__pycache__/localapp.cpython-35.pyc
 %dir /usr/share/bgconf/confs/vlc
 /usr/share/bgconf/confs/vlc/*
+%dir /usr/share/bgconf/confs/plank
+/usr/share/bgconf/confs/plank/*
+%dir /usr/share/bgconf/confs/puddletag
+/usr/share/bgconf/confs/puddletag/*
+%dir /usr/share/bgconf/confs/xscreensaver
+/usr/share/bgconf/confs/xscreensaver/.xscreensaver
+/usr/share/bgconf/confs/bgstack15-red-k25

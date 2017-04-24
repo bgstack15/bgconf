@@ -26,3 +26,9 @@ sudo /usr/share/bgconf/bgconf.py
 
 2017-04-22 B Stack <bgstack15@gmail.com> 0.1-2
 - added vlc
+
+2017-04-23 B Stack <bgstack15@gmail.com> 0.1-3
+- Added xscreensaver
+- Added puddletag
+- Added plank not run on start
+- Added bgstack15-red-k25 theme to ~/.themes directory
