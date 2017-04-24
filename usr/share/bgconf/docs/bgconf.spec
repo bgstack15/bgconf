@@ -74,9 +74,8 @@ rm -rf %{buildroot}
 /usr/share/bgconf/confs/plank/*
 %dir /usr/share/bgconf/confs/puddletag
 /usr/share/bgconf/confs/puddletag/*
-%dir /usr/share/bgconf/confs/xscreensaver
-/usr/share/bgconf/confs/xscreensaver/.xscreensaver
-/usr/share/bgconf/confs/bgstack15-red-k25
+/usr/share/bgconf/confs/xscreensaver
+/usr/share/bgconf/confs/cinnamon
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
