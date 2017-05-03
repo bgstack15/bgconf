@@ -76,6 +76,7 @@ rm -rf %{buildroot}
 /usr/share/bgconf/confs/puddletag/*
 /usr/share/bgconf/confs/xscreensaver
 /usr/share/bgconf/confs/cinnamon
+/usr/share/bgconf/confs/git
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
