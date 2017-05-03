@@ -32,3 +32,8 @@ sudo /usr/share/bgconf/bgconf.py
 - Added puddletag
 - Added plank not run on start
 - Added bgstack15-red-k25 theme to ~/.themes directory
+- Added cinnamon configs
+
+2017-05-03 B Stack <bgstack15@gmail.com> 0.1-4
+- Added git
+- Added firefox extensions: password exporter, secure login (webextension), saved password editor
