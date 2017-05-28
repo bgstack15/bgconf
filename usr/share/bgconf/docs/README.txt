@@ -37,3 +37,7 @@ sudo /usr/share/bgconf/bgconf.py
 2017-05-03 B Stack <bgstack15@gmail.com> 0.1-4
 - Added git
 - Added firefox extensions: password exporter, secure login (webextension), saved password editor
+
+2017-05-28 B Stack <bgstack15@gmail.com> 0.1-5
+- Added ott template file
+- Updated fstab for Mersey network
