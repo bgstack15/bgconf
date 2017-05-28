@@ -20,3 +20,4 @@
 /usr/share/bgconf/confs/xscreensaver
 /usr/share/bgconf/confs/cinnamon
 /usr/share/bgconf/confs/git
+/usr/share/bgconf/confs/ott

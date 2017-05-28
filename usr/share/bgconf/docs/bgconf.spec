@@ -38,25 +38,25 @@ rm -rf %{buildroot}
 
 %files
 %dir /usr/share/bgconf
-%dir /usr/share/bgconf/docs
-%dir /usr/share/bgconf/confs-example
 %dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/inc
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
-/usr/share/bgconf/localapp.py
-/usr/share/bgconf/localapp.pyc
-/usr/share/bgconf/localapp.pyo
-%doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
-/usr/share/bgconf/docs/bgconf.spec
-%doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
-%doc %attr(444, -, -) /usr/share/bgconf/docs/README.txt
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
+%dir /usr/share/bgconf/docs
+%dir /usr/share/bgconf/confs-example
+/usr/share/bgconf/inc/pack
+%doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
+/usr/share/bgconf/inc/get-files
 /usr/share/bgconf/bgconf.py
 /usr/share/bgconf/bgconf.pyc
 /usr/share/bgconf/bgconf.pyo
-/usr/share/bgconf/inc/get-files
-/usr/share/bgconf/inc/pack
-%doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
+%doc %attr(444, -, -) /usr/share/bgconf/docs/README.txt
+/usr/share/bgconf/docs/bgconf.spec
+%doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
+%doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
+/usr/share/bgconf/localapp.py
+/usr/share/bgconf/localapp.pyc
+/usr/share/bgconf/localapp.pyo
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox
@@ -77,6 +77,7 @@ rm -rf %{buildroot}
 /usr/share/bgconf/confs/xscreensaver
 /usr/share/bgconf/confs/cinnamon
 /usr/share/bgconf/confs/git
+/usr/share/bgconf/confs/ott
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
