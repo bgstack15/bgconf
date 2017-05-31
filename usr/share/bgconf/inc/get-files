@@ -2,6 +2,7 @@
 # File: get-files
 case "${1}" in
    rpm)
+if test -n "${package}"; then cd ${rpmbuilddir}/SOURCES/"${package}-${version}"; else cd $( pwd | sed -r -e 's/(SOURCES\/[^\/]+\/).*/\1/;' ); fi
 
 ### for rpm
 find * -type d -regextype grep \
@@ -26,6 +27,7 @@ s/\(.*\.conf\)/%config %attr(666, -, -) \1/
 
       ;;
    deb)
+if test -n "${package}"; then cd ~/deb/"${package}-${version}"; else cd $( pwd | sed -r -e 's/(deb\/[^\/]+\/).*/\1/;' ); fi
 
 ### for deb
 # will be redirected to md5sum
@@ -33,10 +35,6 @@ find . -mindepth 1 \
    ! -type d -regextype grep \
    ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' \
    ! -regex '.*DEBIAN.*' ! -regex '.*\.swp' ! -regex '.*\.git.*' \
-   \( \
-      -regex '.*gui.*' -o \
-      -regex '.*get-files$' \
-   \) \
    -printf '%P '
 
       ;;

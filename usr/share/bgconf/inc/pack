@@ -19,7 +19,7 @@ esac
 echo " $@ " | grep -qiE -- "help|usage|\s-h\s|\s-\?" 1>/dev/null 2>&1 && {
    # display help and exit
    less -F <<EOF
-pack utility version 2017-04-09b-bgconf
+pack utility version 2017-05-31a-bgconf
 usage: pack [ rpm | deb | tar | scrub ] [ --debug | -d {0-10} ]
 Provides a single command for building a package. This script is customized to each package.
 optional arguments:
@@ -62,7 +62,7 @@ rm -rf "${rpmbuilddir}/SOURCES/${package}-${shortversion}/DEBIAN"
 cd "${rpmbuilddir}/SOURCES"
 rm -rf "${package}.tgz"; tar -zc --exclude='.git' --exclude='.gitignore' --exclude='README.md' -f "${package}.tgz" "${package}-${shortversion}"
 cp -p "${rpmbuilddir}/SOURCES/${packagespecfile}" "${rpmbuilddir}/SPECS"
-mkdir -p "${rpmbuilddir}/RPMS/noarch" cd "${rpmbuilddir}/RPMS/noarch"
+mkdir -p "${rpmbuilddir}/RPMS/noarch"; cd "${rpmbuilddir}/RPMS/noarch"
 rpmbuild -bb "${rpmbuilddir}/SPECS/${package}.spec"
 rm -rf "${rpmbuilddir}/SOURCES/${package}-${shortversion}/" "${rpmbuilddir}/SOURCES/${package}.tgz"
 
@@ -73,16 +73,16 @@ rm -rf "${rpmbuilddir}/SOURCES/${package}-${shortversion}/" "${rpmbuilddir}/SOUR
 # You need package dpkg-dev to build packages.
 # if you copy-paste this, be sure to define package, version
 debdir=~/deb
-echo "Gotta say unh: Feature not yet implemented: DEBIAN. Aborted." && exit 1
+#echo "Gotta say unh: Feature not yet implemented: DEBIAN. Aborted." && exit 1
 debiandirmain="${package}-${version}/usr/share/${package}/docs/debian-${package}"
 cd "${debdir}/${package}-${version}"
 "${debdir}/${package}-${version}/usr/share/${package}/inc/get-files" deb | xargs md5sum > "${debdir}/${debiandirmain}/md5sums"
-mv "${debdir}/${package}-${version}/.git" "${debdir}/.git$$"
+#mv "${debdir}/${package}-${version}/.git" "${debdir}/.git$$"
 cd "${debdir}"
 rm -rf "${debdir}/${package}-${version}/DEBIAN/" 2>/dev/null; mkdir -p "${debdir}/${package}-${version}/DEBIAN/"
 cp -pf "${debdir}/${debiandirmain}"/* "${debdir}/${package}-${version}/DEBIAN/"
 fakeroot dpkg-deb -b "${debdir}/${package}-${version}"
-mv "${debdir}/.git$$" "${debdir}/${package}-${version}/.git"
+#mv "${debdir}/.git$$" "${debdir}/${package}-${version}/.git"
 
       ;;
    targz)
