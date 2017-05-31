@@ -41,3 +41,6 @@ sudo /usr/share/bgconf/bgconf.py
 2017-05-28 B Stack <bgstack15@gmail.com> 0.1-5
 - Added ott template file
 - Updated fstab for Mersey network
+
+2017-05-31 B Stack <bgstack15@gmail.com> 0.1-6
+- Fixed the ./pack error where it makes a "cd" directory.
