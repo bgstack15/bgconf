@@ -2,3 +2,4 @@ bgconf.conf
 confs/
 __pycache__/
 __pycache__
+DEBIAN/*
