@@ -14,7 +14,7 @@ find * -type d -regextype grep \
    find * -mindepth 1 ! -name "${package}.spec.$$.swp" ! -regex ".*\.gitignore" \
    ! -type d -regextype grep \
    ! -regex '.*.swp' \
-   ! -regex '.*?DEBIAN.*?' \
+   ! -regex '.*DEBIAN.*' \
    ! -regex '.*__pycache__.*' \
    ! -regex '.*\/confs\/.*'
 } | sed -e '
