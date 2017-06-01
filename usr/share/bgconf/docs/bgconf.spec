@@ -33,6 +33,9 @@ rm -rf %{buildroot}
 %post
 
 %preun
+# rpm preun 2017-05-31
+rm -rf /usr/share/bgconf/__pycache__ /usr/share/bgconf/*.pyc 2>/dev/null ||:
+exit 0
 
 %postun
 

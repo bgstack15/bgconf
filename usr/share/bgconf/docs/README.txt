@@ -44,3 +44,6 @@ sudo /usr/share/bgconf/bgconf.py
 
 2017-05-31 B Stack <bgstack15@gmail.com> 0.1-6
 - Fixed the ./pack error where it makes a "cd" directory.
+- Only runs dconf if it exists in cinnamon.
+- Added GSSAPIDelegateCredentials yes to ssh_config.
+- Added deb packaging.
