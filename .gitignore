@@ -3,3 +3,5 @@ confs/
 __pycache__/
 __pycache__
 DEBIAN/*
+DEBIAN/
+DEBIAN
