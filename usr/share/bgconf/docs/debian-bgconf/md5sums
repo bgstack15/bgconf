@@ -1,14 +1,14 @@
 badb3feb6ad49aacb529235057094d2e  usr/share/bgconf/inc/get-files
 309e2c80db3c1d08614a7c4bbf9b276a  usr/share/bgconf/inc/confs.txt
 6049f85c4933301f343db5659962086d  usr/share/bgconf/inc/pack
-0c274068fd65de48c791e37ae49de48d  usr/share/bgconf/bgconf.conf
+461347b80cd43374fba1bcc96c6ce6a3  usr/share/bgconf/bgconf.conf
 d2b5122be5a19703299ee24df17c4ec7  usr/share/bgconf/bgconf.py
 b97a63b5a972e3f7e157c9e0961bb2ae  usr/share/bgconf/bgconf.conf-example
 79bc40d5c970929e6caf0cd862f1b245  usr/share/bgconf/docs/bgconf.spec
 1dcca23355272056f04fe8bf20edfce0  usr/share/bgconf/docs/debian-bgconf/compat
 d41d8cd98f00b204e9800998ecf8427e  usr/share/bgconf/docs/debian-bgconf/postrm
 89ad2b3bada3f47bbbda925abf497fcd  usr/share/bgconf/docs/debian-bgconf/control
-dddf4713129e7c47d6bba7deea83468a  usr/share/bgconf/docs/debian-bgconf/md5sums
+590cd06a766c133317cdcf8701203ef4  usr/share/bgconf/docs/debian-bgconf/md5sums
 d41d8cd98f00b204e9800998ecf8427e  usr/share/bgconf/docs/debian-bgconf/preinst
 e06af842c067947c204c72bc25a6db0f  usr/share/bgconf/docs/debian-bgconf/changelog
 507b1ff17f022cdf6f71856ca6f1eb96  usr/share/bgconf/docs/debian-bgconf/conffiles
