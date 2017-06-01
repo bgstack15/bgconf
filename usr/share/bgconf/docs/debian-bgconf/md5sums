@@ -13,7 +13,7 @@ d41d8cd98f00b204e9800998ecf8427e  usr/share/bgconf/docs/debian-bgconf/preinst
 e06af842c067947c204c72bc25a6db0f  usr/share/bgconf/docs/debian-bgconf/changelog
 507b1ff17f022cdf6f71856ca6f1eb96  usr/share/bgconf/docs/debian-bgconf/conffiles
 d41d8cd98f00b204e9800998ecf8427e  usr/share/bgconf/docs/debian-bgconf/postinst
-d41d8cd98f00b204e9800998ecf8427e  usr/share/bgconf/docs/debian-bgconf/prerm
+3bb97acbf0f687a34091e6df3c83f34f  usr/share/bgconf/docs/debian-bgconf/prerm
 b1605b4f0126ca5e64b18158b273bdfa  usr/share/bgconf/docs/bgconf-version.txt
 e9f6991322633bfc3d1eb3f95eb43bbd  usr/share/bgconf/docs/README.txt
 c49af6d41412abc1516e9ceb80442ec6  usr/share/bgconf/docs/files-for-versioning.txt
