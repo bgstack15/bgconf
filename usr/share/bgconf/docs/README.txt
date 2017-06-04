@@ -47,3 +47,6 @@ sudo /usr/share/bgconf/bgconf.py
 - Only runs dconf if it exists in cinnamon.
 - Added GSSAPIDelegateCredentials yes to ssh_config.
 - Added deb packaging.
+
+2017-06-04 B Stack <bgstack15@gmail.com> 0.1-7
+- Fixed the absence of the .git in the confs directory.
