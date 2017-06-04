@@ -34,7 +34,7 @@ if test -n "${package}"; then cd ~/deb/"${package}-${version}"; else cd $( pwd |
 find . -mindepth 1 \
    ! -type d -regextype grep \
    ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' \
-   ! -regex '.*DEBIAN.*' ! -regex '.*\.swp' ! -regex '.*\.git.*' \
+   ! -regex '.*DEBIAN.*' ! -regex '.*\.swp' ! -regex '^\.\/\.git.*' \
    -printf '%P '
 
       ;;
