@@ -41,35 +41,35 @@ exit 0
 
 %files
 %dir /usr/share/bgconf
-%dir /usr/share/bgconf/inc
-%dir /usr/share/bgconf/confs-example
-%dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/docs
 %dir /usr/share/bgconf/docs/debian-bgconf
+%dir /usr/share/bgconf/confs-example
+%dir /usr/share/bgconf/confs
+%dir /usr/share/bgconf/inc
 %config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
-/usr/share/bgconf/inc/pack
-/usr/share/bgconf/inc/get-files
-%doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
 /usr/share/bgconf/localapp.py
 /usr/share/bgconf/localapp.pyc
 /usr/share/bgconf/localapp.pyo
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
-/usr/share/bgconf/docs/debian-bgconf/control
+%doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
+/usr/share/bgconf/docs/debian-bgconf/preinst
+/usr/share/bgconf/docs/debian-bgconf/md5sums
+/usr/share/bgconf/docs/debian-bgconf/changelog
 /usr/share/bgconf/docs/debian-bgconf/prerm
 /usr/share/bgconf/docs/debian-bgconf/postinst
-/usr/share/bgconf/docs/debian-bgconf/preinst
-/usr/share/bgconf/docs/debian-bgconf/conffiles
-/usr/share/bgconf/docs/debian-bgconf/changelog
-/usr/share/bgconf/docs/debian-bgconf/md5sums
-/usr/share/bgconf/docs/debian-bgconf/postrm
 /usr/share/bgconf/docs/debian-bgconf/compat
-%doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
+/usr/share/bgconf/docs/debian-bgconf/postrm
+/usr/share/bgconf/docs/debian-bgconf/control
+/usr/share/bgconf/docs/debian-bgconf/conffiles
 /usr/share/bgconf/docs/bgconf.spec
-%doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
+%doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
 %doc %attr(444, -, -) /usr/share/bgconf/docs/README.txt
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
 /usr/share/bgconf/bgconf.py
 /usr/share/bgconf/bgconf.pyc
 /usr/share/bgconf/bgconf.pyo
+/usr/share/bgconf/inc/get-files
+/usr/share/bgconf/inc/pack
+%doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox
@@ -92,6 +92,7 @@ exit 0
 /usr/share/bgconf/confs/git
 /usr/share/bgconf/confs/ott
 /usr/share/bgconf/confs/ssh
+/usr/share/bgconf/confs/dash
 
 %changelog
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
