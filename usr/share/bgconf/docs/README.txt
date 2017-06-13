@@ -50,3 +50,6 @@ sudo /usr/share/bgconf/bgconf.py
 
 2017-06-04 B Stack <bgstack15@gmail.com> 0.1-7
 - Fixed the absence of the .git in the confs directory.
+
+2017-06-12 B Stack <bgstack15@gmail.com> 0.1-8
+- Added conf for dash fix
