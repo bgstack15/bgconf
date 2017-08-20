@@ -41,35 +41,35 @@ exit 0
 
 %files
 %dir /usr/share/bgconf
-%dir /usr/share/bgconf/docs
-%dir /usr/share/bgconf/docs/debian-bgconf
-%dir /usr/share/bgconf/confs-example
 %dir /usr/share/bgconf/confs
-%dir /usr/share/bgconf/inc
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
+%dir /usr/share/bgconf/build
+%dir /usr/share/bgconf/build/debian-bgconf
+%dir /usr/share/bgconf/confs-example
+%doc %attr(444, -, -) /usr/share/doc/bgconf/version.txt
+%doc %attr(444, -, -) /usr/share/doc/bgconf/README.txt
+/usr/share/bgconf/doc
 /usr/share/bgconf/localapp.py
 /usr/share/bgconf/localapp.pyc
 /usr/share/bgconf/localapp.pyo
-%doc %attr(444, -, -) /usr/share/bgconf/docs/bgconf-version.txt
-/usr/share/bgconf/docs/debian-bgconf/preinst
-/usr/share/bgconf/docs/debian-bgconf/md5sums
-/usr/share/bgconf/docs/debian-bgconf/changelog
-/usr/share/bgconf/docs/debian-bgconf/prerm
-/usr/share/bgconf/docs/debian-bgconf/postinst
-/usr/share/bgconf/docs/debian-bgconf/compat
-/usr/share/bgconf/docs/debian-bgconf/postrm
-/usr/share/bgconf/docs/debian-bgconf/control
-/usr/share/bgconf/docs/debian-bgconf/conffiles
-/usr/share/bgconf/docs/bgconf.spec
-%doc %attr(444, -, -) /usr/share/bgconf/docs/files-for-versioning.txt
-%doc %attr(444, -, -) /usr/share/bgconf/docs/README.txt
+/usr/share/bgconf/build/debian-bgconf/control
+/usr/share/bgconf/build/debian-bgconf/postinst
+/usr/share/bgconf/build/debian-bgconf/changelog
+/usr/share/bgconf/build/debian-bgconf/md5sums
+/usr/share/bgconf/build/debian-bgconf/compat
+/usr/share/bgconf/build/debian-bgconf/conffiles
+/usr/share/bgconf/build/debian-bgconf/prerm
+/usr/share/bgconf/build/debian-bgconf/postrm
+/usr/share/bgconf/build/debian-bgconf/preinst
+/usr/share/bgconf/build/bgconf.spec
+%doc %attr(444, -, -) /usr/share/bgconf/build/confs.txt
+/usr/share/bgconf/build/get-files
+/usr/share/bgconf/build/pack
+%doc %attr(444, -, -) /usr/share/bgconf/build/files-for-versioning.txt
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
 %config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
 /usr/share/bgconf/bgconf.py
 /usr/share/bgconf/bgconf.pyc
 /usr/share/bgconf/bgconf.pyo
-/usr/share/bgconf/inc/get-files
-/usr/share/bgconf/inc/pack
-%doc %attr(444, -, -) /usr/share/bgconf/inc/confs.txt
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox
