@@ -1,0 +1,4 @@
+doc/README.txt
+doc/version.txt
+build/bgconf.spec
+build/debian-bgconf/control
