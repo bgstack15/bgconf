@@ -56,3 +56,5 @@ sudo /usr/share/bgconf/bgconf.py
 
 2017-08-20 B Stack <bgstack15@gmail.com> 0.1-9
 - Rearranged directories to match latest bgscripts spec
+- Added numix-circle icon theme to cinnamon dconf
+- Added gnome-terminal settings to cinnamon dconf
