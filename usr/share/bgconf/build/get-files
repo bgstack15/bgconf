@@ -17,12 +17,12 @@ find * -type d -regextype grep \
    ! -regex '.*DEBIAN.*' \
    ! -regex '.*__pycache__.*' \
    ! -regex '.*\/confs\/.*'
-} | sed -e '
+} | sed -r -e '
 s/^/\//
-s/\(.*\.txt\)/%doc %attr(444, -, -) \1/
-s/\(.*bin.*\)/%verify(link) \1/
-s/\(.*\)\.py$/\1\.py\n\1\.pyc\n\1\.pyo/
-s/\(.*\.conf\)/%config %attr(666, -, -) \1/
+s/(.*\.txt)/%doc %attr(444, -, -) \1/
+s/(.*bin.*)/%verify(link) \1/
+s/(.*)\.py$/\1\.py\n\1\.pyc\n\1\.pyo/
+s/(.*\.conf)/%config %attr(666, -, -) \1/
 '
 
       ;;
