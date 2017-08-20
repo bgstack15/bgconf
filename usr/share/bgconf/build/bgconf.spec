@@ -89,6 +89,9 @@ exit 0
 /usr/share/bgconf/confs/puddletag/*
 /usr/share/bgconf/confs/xscreensaver
 /usr/share/bgconf/confs/cinnamon
+/usr/share/bgconf/confs/xfce
+/usr/share/bgconf/confs/vim
+/usr/share/bgconf/confs/desktop-theme
 /usr/share/bgconf/confs/git
 /usr/share/bgconf/confs/ott
 /usr/share/bgconf/confs/ssh
