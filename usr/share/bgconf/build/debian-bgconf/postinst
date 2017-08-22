@@ -1,0 +1,9 @@
+# deb postinst 2017-08-22
+{
+if test "$1" = "configure";
+then
+
+   # install symlink for doc
+   test ! -h /usr/share/bgconf/doc && ln -s ../doc/bgconf /usr/share/bgconf/doc
+fi
+} 1>/dev/null 2>&1

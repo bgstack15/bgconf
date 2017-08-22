@@ -54,7 +54,7 @@ sudo /usr/share/bgconf/bgconf.py
 2017-06-12 B Stack <bgstack15@gmail.com> 0.1-8
 - Added conf for dash fix
 
-2017-08-21 B Stack <bgstack15@gmail.com> 0.1-9
+2017-08-22 B Stack <bgstack15@gmail.com> 0.1-9
 - Rearranged directories to match latest bgscripts spec
 - Moved desktop theme to own 'application' heading
 - Added numix-circle icon theme to desktop-theme

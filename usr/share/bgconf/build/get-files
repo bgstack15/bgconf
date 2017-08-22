@@ -35,6 +35,7 @@ find . -mindepth 1 \
    ! -type d -regextype grep \
    ! -regex '.*.hg.*' ! -regex '.*?debian-binary.*' \
    ! -regex '.*DEBIAN.*' ! -regex '.*\.swp' ! -regex '^\.\/\.git.*' \
+   ! -regex '.*bgconf\/doc' \
    -printf '%P '
 
       ;;
