@@ -63,4 +63,6 @@ sudo /usr/share/bgconf/bgconf.py
 - Added nemo settings to cinnamon dconf
 
 2017-09-17 B Stack <bgstack15@gmail.com> 0.1-10
-- 
+- Fixed git config again.
+- Added xfce.sh script.
+- Added ~/.bcrc
