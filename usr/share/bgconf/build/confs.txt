@@ -26,4 +26,4 @@
 /usr/share/bgconf/confs/ott
 /usr/share/bgconf/confs/ssh
 /usr/share/bgconf/confs/dash
-/usr/share/bgconf/confs/git
+/usr/share/bgconf/confs/bc

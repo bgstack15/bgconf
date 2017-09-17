@@ -100,6 +100,7 @@ exit 0
 /usr/share/bgconf/confs/ott
 /usr/share/bgconf/confs/ssh
 /usr/share/bgconf/confs/dash
+/usr/share/bgconf/confs/bc
 
 %changelog
 * Sun Sep 17 2017 B Stack <bgstack15@gmail.com> 0.1-10
