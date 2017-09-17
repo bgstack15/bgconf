@@ -66,3 +66,4 @@ sudo /usr/share/bgconf/bgconf.py
 - Fixed git config again.
 - Added xfce.sh script.
 - Added ~/.bcrc
+- Abstracted out the dconf and xfconf commands for easier updating in the future.
