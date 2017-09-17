@@ -24,7 +24,7 @@ infile="${1}"
 # reference:  https://unix.stackexchange.com/questions/29128/how-to-read-environment-variables-of-a-process/29132#29132
 tmpfile1="$( mktemp )"
 #xargs --null --max-args=1 echo < /proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
-find /proc/ -regextype grep -regex "/proc/$( ps -eu${USER} | grep -E "xfgwgwce" | head -n1 | awk '{print $1}' )/environ" 2>/dev/null | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
+find /proc/ -regextype grep -regex "/proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ" 2>/dev/null | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
 test -f "${tmpfile1}" && test $( grep -cE "(DBUS_SESSION_BUS_ADDRESS|DISPLAY)=.+" "${tmpfile1}" 2>/dev/null ) -ge 2 || echo "$0 error: Could not find current ${thisDE} session. Did not work." 1>&2
 chmod +rx "${tmpfile1}" 2>/dev/null
 . "${tmpfile1}"
