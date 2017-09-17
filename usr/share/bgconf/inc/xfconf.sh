@@ -31,7 +31,7 @@ chmod +rx "${tmpfile1}" 2>/dev/null
 /bin/rm -f "${tmpfile1}" 1>/dev/null 2>&1
 
 # assume infile exists as a file
-if test -n "$( cat "${infile}" 2>/dev/null )" && test -x "$( which "${thisDEconf}" )";
+if test -n "$( cat "${infile}" 2>/dev/null )" && test -x "$( which "${thisDEconf}" )" && ps -ef | grep -qE "${thisDE}" && test -n "${DBUS_SESSION_BUS_ADDRESS}";
 then
 
    # get user of that directory
