@@ -26,11 +26,14 @@ case "${USER}" in
    *) :;;
 esac
 
+# Perform deployment of configs
 rm -rf ~/.config/xfce4
 sudo /usr/share/bgconf/bgconf.py
+
+# Log out
 if test -e "$( which loginctl 2>/dev/null )";
 then
    loginctl kill-user ${USER}
 else
-   echo "Please log out immediately."
+   echo "Please log out immediately to get the correct effects."
 fi
