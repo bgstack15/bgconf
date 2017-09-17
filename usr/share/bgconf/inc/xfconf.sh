@@ -24,13 +24,13 @@ infile="${1}"
 # reference:  https://unix.stackexchange.com/questions/29128/how-to-read-environment-variables-of-a-process/29132#29132
 tmpfile1="$( mktemp )"
 #xargs --null --max-args=1 echo < /proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
-find /proc/ -regextype grep -regex "/proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ" 2>/dev/null | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
+find /proc/ -regextype grep -regex "/proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ" 2>/dev/null | xargs grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
 test -f "${tmpfile1}" && test $( grep -cE "(DBUS_SESSION_BUS_ADDRESS|DISPLAY)=.+" "${tmpfile1}" 2>/dev/null ) -ge 2 || echo "$0 error: Could not find current ${thisDE} session. Did not work." 1>&2
 chmod +rx "${tmpfile1}" 2>/dev/null
 . "${tmpfile1}"
 /bin/rm -f "${tmpfile1}" 1>/dev/null 2>&1
 
-# assume infile exists as a file
+# Assume infile exists as a file
 if test -n "$( cat "${infile}" 2>/dev/null )" && test -x "$( which "${thisDEconf}" )" && ps -ef | grep -qE "${thisDE}" && test -n "${DBUS_SESSION_BUS_ADDRESS}";
 then
 
@@ -45,8 +45,16 @@ then
       # display output
       #printf "channel=%s\tattrib=%s\tvalue\%s\n" "${channel}" "${attrib}" "${value}"
 
+      # provide data type. This needs to be researched before making a new .xfconf file.
+      _thistype=String
+      case "${attrib}" in
+         *last-separator-position) _thistype=Integer ;;
+         *last-show-hidden|*misc-single-click) _thistype=Boolean ;;
+      esac
+
       # make change
-      sudo su - "${thisowner}" -c "DISPLAY=${DISPLAY} DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} ${thisDEconf} -c ${channel} -p ${attrib} -s ${value}"
+      sudo su - "${thisowner}" -c "DISPLAY=${DISPLAY} DBUS_SESSION_BUS_ADDRESS=${DBUS_SESSION_BUS_ADDRESS} ${thisDEconf} -n -c ${channel} -p ${attrib} -s ${value}"
+
    done
 
 fi
