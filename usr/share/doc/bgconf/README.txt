@@ -61,3 +61,6 @@ sudo /usr/share/bgconf/bgconf.py
 - Added gnome-terminal settings to cinnamon dconf
 - Added vimrc
 - Added nemo settings to cinnamon dconf
+
+2017-09-17 B Stack <bgstack15@gmail.com> 0.1-10
+- 

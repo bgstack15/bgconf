@@ -1,7 +1,7 @@
 Summary:	set of confs for standard deployments
 Name:		bgconf
 Version:	0.1
-Release:	9
+Release:	10
 License:	CC BY-SA 4.0
 Group:		Applications/System
 Source:		bgconf.tgz
@@ -98,5 +98,8 @@ exit 0
 /usr/share/bgconf/confs/dash
 
 %changelog
+* Sun Sep 17 2017 B Stack <bgstack15@gmail.com> 0.1-10
+- Updated content. See doc/README.txt.
+
 * Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
 - Initial rpm build
