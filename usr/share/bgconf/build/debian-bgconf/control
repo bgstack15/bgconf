@@ -1,5 +1,5 @@
 Package: bgconf
-Version: 0.1-10
+Version: 0.1-11
 Section: utils
 Architecture: all
 Essential: no

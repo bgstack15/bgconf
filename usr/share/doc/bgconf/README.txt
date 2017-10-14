@@ -67,3 +67,6 @@ sudo /usr/share/bgconf/bgconf.py
 - Added xfce.sh script.
 - Added ~/.bcrc
 - Abstracted out the dconf and xfconf commands for easier updating in the future.
+
+2017-10-14 B Stack <bgstack15@gmail.com> 0.1-11
+- 
