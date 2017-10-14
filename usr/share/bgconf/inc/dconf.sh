@@ -7,6 +7,7 @@
 # History:
 #    2017-06 Main research was done but put in separate bgconf scripts.
 #    2017-09-17 I decided to separate it out to streamline the bgconf scripts themselves.
+#    2017-10-14 Updated how to find the running desktop environment.
 # Usage:
 #    In a script, determine that a dconf file exists, then call:
 #       dconf.sh mysettings.dconf
@@ -25,9 +26,7 @@ infile="${1}"
 # reference:  https://unix.stackexchange.com/questions/29128/how-to-read-environment-variables-of-a-process/29132#29132
 tmpfile1="$( mktemp )"
 if test -n "${SUDO_USER}"; then _user="${SUDO_USER}"; else _user="${USER}"; fi
-#xargs --null --max-args=1 echo < /proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
-#find /proc/ -regextype grep -regex "/proc/$( ps -eu${USER} | grep -E "${thisDE}" | head -n1 | awk '{print $1}' )/environ" 2>/dev/null | xargs grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
-cat /proc/$( ps -eu${_user} | grep -E "${thisDE}" | tail -n1 | awk '{print $1}' )/environ 2>/dev/null | tr '\0' '\n' | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
+cat /proc/$( ps -eu${_user} -o pid,command,sess 2>/dev/null | grep -E "${thisDE}" | awk '{print $NF}' | sort | uniq | head -n1 )/environ 2>/dev/null | tr '\0' '\n' | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
 test -f "${tmpfile1}" && test $( grep -cE "(DBUS_SESSION_BUS_ADDRESS|DISPLAY)=.+" "${tmpfile1}" 2>/dev/null ) -ge 2 || echo "$0 error: Skipping ${thisDE}: Could not find current session." 1>&2
 chmod +rx "${tmpfile1}" 2>/dev/null
 . "${tmpfile1}"
