@@ -1,4 +1,4 @@
-# deb postinst 2017-08-22
+# deb postinst 2017-10-14
 {
 if test "$1" = "configure";
 then
@@ -7,3 +7,4 @@ then
    test ! -h /usr/share/bgconf/doc && ln -s ../doc/bgconf /usr/share/bgconf/doc
 fi
 } 1>/dev/null 2>&1
+exit 0

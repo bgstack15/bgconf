@@ -31,9 +31,12 @@ rsync -a . %{buildroot}/ --exclude='**/.*.swp' --exclude='**/.git' --exclude='**
 rm -rf %{buildroot}
 
 %post
+# rpm post 2017-10-14
+# nothing to do here because the rpm can include the symlink for /usr/share/doc/bgconf
+exit 0
 
 %preun
-# rpm preun 2017-05-31
+# rpm preun 2017-10-14
 rm -rf /usr/share/bgconf/__pycache__ /usr/share/bgconf/*.pyc 2>/dev/null ||:
 exit 0
 

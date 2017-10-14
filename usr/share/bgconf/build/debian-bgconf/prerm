@@ -1,2 +1,3 @@
-# deb prerm 2017-05-31
+# deb prerm 2017-10-14
 rm -rf /usr/share/bgconf/__pycache__ /usr/share/bgconf/*.pyc 2>/dev/null
+exit 0
