@@ -26,7 +26,7 @@ infile="${1}"
 # reference:  https://unix.stackexchange.com/questions/29128/how-to-read-environment-variables-of-a-process/29132#29132
 tmpfile1="$( mktemp )"
 if test -n "${SUDO_USER}"; then _user="${SUDO_USER}"; else _user="${USER}"; fi
-cat /proc/$( ps -e -o pid,user,command,sess 2>/dev/null | grep -E "${_user}.*${thisDE}" | awk '{print $NF}' | sort | uniq | head -n1 )/environ 2>/dev/null | tr '\0' '\n' | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
+cat /proc/$( ps -U "${_user}" -e -o pid,user:20,command:90 2>/dev/null | grep -E "${thisDE}-session(\s|$)" | awk '{print $1}' | sort | uniq | head -n1 )/environ 2>/dev/null | tr '\0' '\n' | grep -E "DBUS_SESSION_BUS_ADDRESS|DISPLAY" > "${tmpfile1}"
 test -f "${tmpfile1}" && test $( grep -cE "(DBUS_SESSION_BUS_ADDRESS|DISPLAY)=.+" "${tmpfile1}" 2>/dev/null ) -ge 2 || echo "$0 error: Skipping ${thisDE}: Could not find current session." 1>&2
 chmod +rx "${tmpfile1}" 2>/dev/null
 . "${tmpfile1}"

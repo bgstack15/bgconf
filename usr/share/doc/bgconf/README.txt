@@ -70,3 +70,6 @@ sudo /usr/share/bgconf/bgconf.py
 
 2017-10-14 B Stack <bgstack15@gmail.com> 0.1-11
 - Updated and fixed dconf.sh and xfconf.sh to find the running DE a better way
+
+* Sun Nov 19 2017 B Stack <bgstack15@gmail.com> 0.1-12
+- Updated and fixed dconf.sh and xfconf.sh to find the running DE a better way again
