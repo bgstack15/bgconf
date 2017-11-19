@@ -73,3 +73,6 @@ sudo /usr/share/bgconf/bgconf.py
 
 * Sun Nov 19 2017 B Stack <bgstack15@gmail.com> 0.1-12
 - Updated and fixed dconf.sh and xfconf.sh to find the running DE a better way again
+- Fixed script calls to updateval.py for bgscripts 1.3-0
+- Updated vimrc with tabstop info
+- Updated Firefox for version 57 extensions, which requires some custom logic.
