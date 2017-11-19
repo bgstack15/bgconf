@@ -44,39 +44,39 @@ exit 0
 
 %files
 %dir /usr/share/bgconf
-%dir /usr/share/bgconf/confs
-%dir /usr/share/bgconf/inc
 %dir /usr/share/bgconf/build
 %dir /usr/share/bgconf/build/debian-bgconf
+%dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/confs-example
-/usr/share/bgconf/inc/xfce.sh
-/usr/share/bgconf/inc/dconf.sh
-/usr/share/bgconf/inc/xfconf.sh
-/usr/share/bgconf/bgconf.py
-/usr/share/bgconf/bgconf.pyc
-/usr/share/bgconf/bgconf.pyo
-/usr/share/bgconf/build/pack
-%doc %attr(444, -, -) /usr/share/bgconf/build/confs.txt
-/usr/share/bgconf/build/get-files
-/usr/share/bgconf/build/bgconf.spec
-%doc %attr(444, -, -) /usr/share/bgconf/build/files-for-versioning.txt
-/usr/share/bgconf/build/debian-bgconf/changelog
-/usr/share/bgconf/build/debian-bgconf/control
+%dir /usr/share/bgconf/inc
+%doc %attr(444, -, -) /usr/share/doc/bgconf/README.txt
+%doc %attr(444, -, -) /usr/share/doc/bgconf/version.txt
+/usr/share/bgconf/doc
 /usr/share/bgconf/build/debian-bgconf/prerm
 /usr/share/bgconf/build/debian-bgconf/compat
 /usr/share/bgconf/build/debian-bgconf/postinst
 /usr/share/bgconf/build/debian-bgconf/postrm
+/usr/share/bgconf/build/debian-bgconf/changelog
+/usr/share/bgconf/build/debian-bgconf/control
 /usr/share/bgconf/build/debian-bgconf/preinst
 /usr/share/bgconf/build/debian-bgconf/md5sums
 /usr/share/bgconf/build/debian-bgconf/conffiles
+/usr/share/bgconf/build/get-files
+%doc %attr(444, -, -) /usr/share/bgconf/build/confs.txt
+%doc %attr(444, -, -) /usr/share/bgconf/build/files-for-versioning.txt
+/usr/share/bgconf/build/pack
+/usr/share/bgconf/build/bgconf.spec
+/usr/share/bgconf/bgconf.py
+/usr/share/bgconf/bgconf.pyc
+/usr/share/bgconf/bgconf.pyo
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
 %config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
-/usr/share/bgconf/doc
 /usr/share/bgconf/localapp.py
 /usr/share/bgconf/localapp.pyc
 /usr/share/bgconf/localapp.pyo
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
-%doc %attr(444, -, -) /usr/share/doc/bgconf/version.txt
-%doc %attr(444, -, -) /usr/share/doc/bgconf/README.txt
+/usr/share/bgconf/inc/xfce.sh
+/usr/share/bgconf/inc/dconf.sh
+/usr/share/bgconf/inc/xfconf.sh
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox
