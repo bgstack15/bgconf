@@ -76,3 +76,6 @@ sudo /usr/share/bgconf/bgconf.py
 - Fixed script calls to updateval.py for bgscripts 1.3-0
 - Updated vimrc with tabstop info
 - Updated Firefox for version 57 extensions, which requires some custom logic.
+
+* Sun Dec 10 2017 B Stack <bgstack15@gmail.com> 0.1-13
+- Work in progress
