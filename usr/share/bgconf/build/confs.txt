@@ -27,3 +27,5 @@
 /usr/share/bgconf/confs/ssh
 /usr/share/bgconf/confs/dash
 /usr/share/bgconf/confs/bc
+/usr/share/bgconf/confs/copyq
+/usr/share/bgconf/confs/display-manager

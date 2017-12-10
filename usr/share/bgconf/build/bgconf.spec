@@ -104,6 +104,8 @@ exit 0
 /usr/share/bgconf/confs/ssh
 /usr/share/bgconf/confs/dash
 /usr/share/bgconf/confs/bc
+/usr/share/bgconf/confs/copyq
+/usr/share/bgconf/confs/display-manager
 
 %changelog
 * Sun Dec 10 2017 B Stack <bgstack15@gmail.com> 0.1-13

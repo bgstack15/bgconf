@@ -78,4 +78,11 @@ sudo /usr/share/bgconf/bgconf.py
 - Updated Firefox for version 57 extensions, which requires some custom logic.
 
 * Sun Dec 10 2017 B Stack <bgstack15@gmail.com> 0.1-13
-- Work in progress
+- Add copyq
+- Add display-manager lightdm
+- Add my ssh public key
+- Add FF57+ Flash Block (Plus)
+- Fix Thunar settings
+- Fix vimrc scrolloff=0
+- Fix and cleanup bgstack15-red-k25 theme
+-  xfwm4: fix window borders
