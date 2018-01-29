@@ -18,6 +18,7 @@ sudo /usr/share/bgconf/bgconf.py
 ### NOTES
 
 ### REFERENCE
+kerberos https://bgstack15.wordpress.com/2017/12/11/fedora-27-ssh-and-default-kerberos-config/
 
 ### CHANGELOG
 
@@ -89,6 +90,8 @@ sudo /usr/share/bgconf/bgconf.py
 
 * Sun Jan 28 2018 B Stack <bgstack15@gmail.com> 0.1-14
 - Add minor firefox configs
-- vim: remove powerline plugin contents
+- vimrc: remove powerline plugin contents
 - Add lightdm-gtk-greeter
-
+- Add screenrc
+- Add kerberos config
+- Update scite fonts to be fixed-width
