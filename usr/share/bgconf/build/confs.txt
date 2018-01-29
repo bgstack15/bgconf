@@ -29,3 +29,6 @@
 /usr/share/bgconf/confs/bc
 /usr/share/bgconf/confs/copyq
 /usr/share/bgconf/confs/display-manager
+/usr/share/bgconf/confs/screen
+/usr/share/bgconf/confs/lightdm
+/usr/share/bgconf/confs/kerberos
