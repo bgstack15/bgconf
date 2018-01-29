@@ -89,9 +89,10 @@ kerberos https://bgstack15.wordpress.com/2017/12/11/fedora-27-ssh-and-default-ke
 -  xfwm4: fix window borders
 
 * Sun Jan 28 2018 B Stack <bgstack15@gmail.com> 0.1-14
-- Add minor firefox configs
+- firefox: minor config changes
 - vimrc: remove powerline plugin contents
 - Add lightdm-gtk-greeter
 - Add screenrc
 - Add kerberos config
 - Update scite fonts to be fixed-width
+- Update cinnamon dconf window tiling snap osd and hud off
