@@ -86,3 +86,9 @@ sudo /usr/share/bgconf/bgconf.py
 - Fix vimrc scrolloff=0
 - Fix and cleanup bgstack15-red-k25 theme
 -  xfwm4: fix window borders
+
+* Sun Jan 28 2018 B Stack <bgstack15@gmail.com> 0.1-14
+- Add minor firefox configs
+- vim: remove powerline plugin contents
+- Add lightdm-gtk-greeter
+
