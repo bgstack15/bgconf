@@ -108,7 +108,7 @@ exit 0
 /usr/share/bgconf/confs/display-manager
 
 %changelog
-* Sun Jan 28 2017 B Stack <bgstack15@gmail.com> 0.1-14
+* Sun Jan 28 2018 B Stack <bgstack15@gmail.com> 0.1-14
 - Updated content. See doc/README.txt.
 
 * Sun Dec 10 2017 B Stack <bgstack15@gmail.com> 0.1-13
