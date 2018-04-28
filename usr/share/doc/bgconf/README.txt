@@ -96,3 +96,5 @@ kerberos https://bgstack15.wordpress.com/2017/12/11/fedora-27-ssh-and-default-ke
 - Add kerberos config
 - Update scite fonts to be fixed-width
 - Update cinnamon dconf window tiling snap osd and hud off
+
+* Sat Apr 28 2018 B Stack <bgstack15@gmail.com> 0.1-15

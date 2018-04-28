@@ -1,7 +1,7 @@
 Summary:	set of confs for standard deployments
 Name:		bgconf
 Version:	0.1
-Release:	14
+Release:	15
 License:	CC BY-SA 4.0
 Group:		Applications/System
 Source:		bgconf.tgz
@@ -111,20 +111,5 @@ exit 0
 /usr/share/bgconf/confs/kerberos
 
 %changelog
-* Sun Jan 28 2018 B Stack <bgstack15@gmail.com> 0.1-14
+* Sat Apr 28 2018 B Stack <bgstack15@gmail.com> 0.1-15
 - Updated content. See doc/README.txt.
-
-* Sun Dec 10 2017 B Stack <bgstack15@gmail.com> 0.1-13
-- Updated content. See doc/README.txt.
-
-* Sun Nov 19 2017 B Stack <bgstack15@gmail.com> 0.1-12
-- Updated content. See doc/README.txt.
-
-* Sat Oct 14 2017 B Stack <bgstack15@gmail.com> 0.1-11
-- Updated content. See doc/README.txt.
-
-* Sun Sep 17 2017 B Stack <bgstack15@gmail.com> 0.1-10
-- Updated content. See doc/README.txt.
-
-* Sun Apr  9 2017 B Stack <bgstack15@gmail.com> 0.1-1
-- Initial rpm build
