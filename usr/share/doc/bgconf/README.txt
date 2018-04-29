@@ -99,3 +99,5 @@ kerberos https://bgstack15.wordpress.com/2017/12/11/fedora-27-ssh-and-default-ke
 
 * Sat Apr 28 2018 B Stack <bgstack15@gmail.com> 0.1-15
 - display-manager: apply config change instead of being verbose
+- Add my grub configs (no rhgb or quiet)
+- kerberos: fix permissions
