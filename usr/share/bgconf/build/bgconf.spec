@@ -111,6 +111,7 @@ exit 0
 /usr/share/bgconf/confs/screen
 /usr/share/bgconf/confs/lightdm
 /usr/share/bgconf/confs/kerberos
+/usr/share/bgconf/confs/grub
 
 %changelog
 * Sat Apr 28 2018 B Stack <bgstack15@gmail.com> 0.1-15
