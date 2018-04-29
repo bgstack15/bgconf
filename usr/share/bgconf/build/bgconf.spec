@@ -44,39 +44,41 @@ exit 0
 
 %files
 %dir /usr/share/bgconf
-%dir /usr/share/bgconf/confs-example
-%dir /usr/share/bgconf/inc
+%dir /usr/share/bgconf/confs
 %dir /usr/share/bgconf/build
 %dir /usr/share/bgconf/build/debian-bgconf
-%dir /usr/share/bgconf/confs
-/usr/share/bgconf/bgconf.py
-/usr/share/bgconf/bgconf.pyc
-/usr/share/bgconf/bgconf.pyo
-/usr/share/bgconf/doc
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
-%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
-/usr/share/bgconf/inc/dconf.sh
-/usr/share/bgconf/inc/xfce.sh
-/usr/share/bgconf/inc/xfconf.sh
-%doc %attr(444, -, -) /usr/share/bgconf/build/confs.txt
-/usr/share/bgconf/build/get-files
-/usr/share/bgconf/build/pack
-/usr/share/bgconf/build/bgconf.spec
-%doc %attr(444, -, -) /usr/share/bgconf/build/files-for-versioning.txt
-/usr/share/bgconf/build/debian-bgconf/compat
-/usr/share/bgconf/build/debian-bgconf/md5sums
-/usr/share/bgconf/build/debian-bgconf/preinst
-/usr/share/bgconf/build/debian-bgconf/prerm
-/usr/share/bgconf/build/debian-bgconf/control
-/usr/share/bgconf/build/debian-bgconf/postrm
-/usr/share/bgconf/build/debian-bgconf/conffiles
-/usr/share/bgconf/build/debian-bgconf/postinst
-/usr/share/bgconf/build/debian-bgconf/changelog
+%dir /usr/share/bgconf/confs-example
+%dir /usr/share/bgconf/confs-example/grub
+%dir /usr/share/bgconf/inc
 /usr/share/bgconf/localapp.py
 /usr/share/bgconf/localapp.pyc
 /usr/share/bgconf/localapp.pyo
-%doc %attr(444, -, -) /usr/share/doc/bgconf/README.txt
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf
+%doc %attr(444, -, -) /usr/share/bgconf/build/confs.txt
+%doc %attr(444, -, -) /usr/share/bgconf/build/files-for-versioning.txt
+/usr/share/bgconf/build/debian-bgconf/control
+/usr/share/bgconf/build/debian-bgconf/postrm
+/usr/share/bgconf/build/debian-bgconf/conffiles
+/usr/share/bgconf/build/debian-bgconf/md5sums
+/usr/share/bgconf/build/debian-bgconf/postinst
+/usr/share/bgconf/build/debian-bgconf/compat
+/usr/share/bgconf/build/debian-bgconf/changelog
+/usr/share/bgconf/build/debian-bgconf/preinst
+/usr/share/bgconf/build/debian-bgconf/prerm
+/usr/share/bgconf/build/get-files
+/usr/share/bgconf/build/bgconf.spec
+/usr/share/bgconf/build/pack
+/usr/share/bgconf/doc
+%config %attr(666, -, -) /usr/share/bgconf/bgconf.conf-example
+/usr/share/bgconf/bgconf.py
+/usr/share/bgconf/bgconf.pyc
+/usr/share/bgconf/bgconf.pyo
+/usr/share/bgconf/confs-example/grub/my-grub-mods.sh
+/usr/share/bgconf/inc/xfconf.sh
+/usr/share/bgconf/inc/xfce.sh
+/usr/share/bgconf/inc/dconf.sh
 %doc %attr(444, -, -) /usr/share/doc/bgconf/version.txt
+%doc %attr(444, -, -) /usr/share/doc/bgconf/README.txt
 %dir /usr/share/bgconf/confs/irfan
 %attr(666, -, -) /usr/share/bgconf/confs/irfan/i_view32.ini
 %dir /usr/share/bgconf/confs/firefox

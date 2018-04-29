@@ -32,3 +32,4 @@
 /usr/share/bgconf/confs/screen
 /usr/share/bgconf/confs/lightdm
 /usr/share/bgconf/confs/kerberos
+/usr/share/bgconf/confs/grub
